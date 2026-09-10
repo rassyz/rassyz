@@ -2,7 +2,7 @@
 
 ### 📊 Fresh Graduate | Aspiring Data Analyst | Web Development Background
 
-I'm a **fresh graduate from Esa Unggul University** with a strong interest in **Data Analytics and Business Intelligence**.
+I'm a **fresh graduate from Universitas Esa Unggul** with a strong interest in **Data Analytics and Business Intelligence**.
 
 I enjoy working with data to discover patterns, generate insights, and turn business questions into data-driven solutions. I also have a background in **Web Development**, which gives me an additional technical perspective on databases, applications, APIs, and how data is collected, processed, and presented.
 
