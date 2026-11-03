@@ -26,10 +26,11 @@
 
 ## 📅 Hobbies
 
-- Running, currently training for my first half marathon
 - Speed typing on Monkeytype
 - Tinkering with AI agents and automation tools
 - Watching tech videos on YouTube
+- Play videogames
+- Running
 - etc...
 
 ## 💻 Current projects
@@ -41,5 +42,8 @@
 
 ## 📊 GitHub Stats
 
-![Rasyid's GitHub stats](https://github-readme-stats.vercel.app/api?username=rassyz&show_icons=true&theme=github_dark)
-![Top languages](https://github-readme-stats.vercel.app/api/top-langs/?username=rassyz&layout=compact&theme=github_dark)
+![GitHub Streak](https://streak-stats.demolab.com?user=rassyz&theme=github-dark)
+
+## 🔗 Connect
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=plastic&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rasyid-abdul-ra-uf/) [![Portfolio](https://img.shields.io/badge/Portfolio-4285F4?style=plastic&logo=googlechrome&logoColor=white)](https://rassyz.my.id/)
