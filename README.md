@@ -40,6 +40,9 @@
   - Building agents with Google ADK
   - Personal AI agent setup for my daily workflow
 
+<!-- STRAVA:START -->
+<!-- STRAVA:END -->
+
 ## 📊 GitHub Stats
 
 ![GitHub Streak](https://streak-stats.demolab.com?user=rassyz&theme=github-dark)

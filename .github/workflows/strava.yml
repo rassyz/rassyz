@@ -1,0 +1,47 @@
+name: Update Strava stats
+
+on:
+  schedule:
+    - cron: "0 0 * * 1" # Senin 07:00 WIB
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout profile repo
+        uses: actions/checkout@v4
+
+      - name: Checkout token vault (private repo)
+        uses: actions/checkout@v4
+        with:
+          repository: rassyz/strava-token-vault
+          token: ${{ secrets.VAULT_PAT }}
+          path: vault
+
+      - name: Update README from Strava
+        env:
+          STRAVA_CLIENT_ID: ${{ secrets.STRAVA_CLIENT_ID }}
+          STRAVA_CLIENT_SECRET: ${{ secrets.STRAVA_CLIENT_SECRET }}
+          TOKEN_FILE: vault/token.json
+        run: python3 update_strava.py --readme README.md
+
+      - name: Commit vault token (rotated)
+        run: |
+          cd vault
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add token.json
+          git diff --cached --quiet || git commit -m "rotate strava refresh token"
+          git push
+
+      - name: Commit README if changed
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add README.md
+          git diff --cached --quiet || git commit -m "update strava stats"
+          git push
