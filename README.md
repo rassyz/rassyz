@@ -41,6 +41,29 @@
   - Personal AI agent setup for my daily workflow
 
 <!-- STRAVA:START -->
+## 🏃‍♂️ Running Journey
+
+**Statistics (2026)**
+- **Total distance:** 673.2 km
+- **Total runs:** 81
+- **Longest run:** 23.01 km
+- **Total elevation:** 1,356 m
+
+**Monthly volume (2026):**
+```
+Jan  █░░░░░░░░░░░    10.3 km
+Feb  ░░░░░░░░░░░░     0.0 km
+Mar  ██░░░░░░░░░░    22.6 km
+Apr  █████░░░░░░░    66.7 km
+May  ████████████   175.9 km
+Jun  ████░░░░░░░░    57.4 km
+Jul  █████░░░░░░░    79.2 km
+Aug  ████████░░░░   114.7 km
+Sep  ███████░░░░░    97.6 km
+Oct  ███░░░░░░░░░    40.1 km
+Nov  █░░░░░░░░░░░     8.8 km  (as of Nov 4)
+Dec  ░░░░░░░░░░░░     0.0 km
+```
 <!-- STRAVA:END -->
 
 ## 📊 GitHub Stats
