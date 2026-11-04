@@ -12,7 +12,7 @@ import argparse, json, os, sys, urllib.request, urllib.parse
 from datetime import datetime
 
 API = "https://www.strava.com/api/v3"
-MONTHS = ["Jan", "Feb", "Mar", "Apr", "Mei", "Jun", "Jul", "Agu", "Sep", "Okt", "Nov", "Des"]
+MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 START, END = "<!-- STRAVA:START -->", "<!-- STRAVA:END -->"
 
 def post_token(params):
@@ -35,10 +35,9 @@ def fetch_activities(token):
         acts.extend(batch)
         page += 1
 
-def fmt_id(x, dec=1):
-    """Indonesian number format: 673,2 / 1.356"""
-    s = f"{x:,.{dec}f}"                      # 673.2 / 1,356.0 (US style)
-    return s.replace(",", " ").replace(".", ",").replace(" ", ".")
+def fmt_en(x, dec=1):
+    """English number format: 673.2 / 1,356"""
+    return f"{x:,.{dec}f}"
 
 def render(acts, now):
     year = now.year
@@ -55,20 +54,20 @@ def render(acts, now):
     lines = [
         "## 🏃‍♂️ Running Journey",
         "",
-        f"**Statistik ({year})**",
-        f"- **Total jarak:** {fmt_id(total_km)} km",
-        f"- **Jumlah lari:** {len(runs)}",
-        f"- **Lari terjauh:** {fmt_id(longest, 2)} km",
-        f"- **Total elevasi:** {fmt_id(elev, 0)} m",
+        f"**Statistics ({year})**",
+        f"- **Total distance:** {fmt_en(total_km)} km",
+        f"- **Total runs:** {len(runs)}",
+        f"- **Longest run:** {fmt_en(longest, 2)} km",
+        f"- **Total elevation:** {fmt_en(elev, 0)} m",
         "",
-        f"**Volume per bulan {year}:**",
+        f"**Monthly volume ({year}):**",
         "```",
     ]
     for i, v in enumerate(monthly):
         filled = max(1, round(v / mx * 12)) if v > 0 else 0
-        bar = "▓" * filled + "░" * (12 - filled)
-        note = f"  (s.d. {now.day} {MONTHS[now.month - 1]})" if i == now.month - 1 else ""
-        lines.append(f"{MONTHS[i]:<4} {bar}  {fmt_id(v):>6} km{note}")
+        bar = "█" * filled + "░" * (12 - filled)
+        note = f"  (as of {MONTHS[now.month - 1]} {now.day})" if i == now.month - 1 else ""
+        lines.append(f"{MONTHS[i]:<4} {bar}  {fmt_en(v):>6} km{note}")
     lines.append("```")
     return "\n".join(lines)
 
