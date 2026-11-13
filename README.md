@@ -44,10 +44,10 @@
 ## 🏃‍♂️ Running Journey
 
 **Statistics (2026)**
-- **Total distance:** 673.2 km
-- **Total runs:** 81
+- **Total distance:** 704.8 km
+- **Total runs:** 84
 - **Longest run:** 23.01 km
-- **Total elevation:** 1,356 m
+- **Total elevation:** 1,370 m
 
 **Monthly volume (2026):**
 ```
@@ -61,7 +61,7 @@ Jul  █████░░░░░░░    79.2 km
 Aug  ████████░░░░   114.7 km
 Sep  ███████░░░░░    97.6 km
 Oct  ███░░░░░░░░░    40.1 km
-Nov  █░░░░░░░░░░░     8.8 km  (as of Nov 4)
+Nov  ███░░░░░░░░░    40.4 km  (as of Nov 13)
 Dec  ░░░░░░░░░░░░     0.0 km
 ```
 <!-- STRAVA:END -->
